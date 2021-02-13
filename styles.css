@@ -56,6 +56,11 @@ a:hover {
     align-items: center;
 }
 
+.menu-right a:link,
+.menu-right  a:visited {
+    color: #222;
+}
+
 .menu-right {
     padding: 5px;
     display: flex;
@@ -112,7 +117,6 @@ a:hover {
     justify-content: center;
     align-items: center;
     margin: 0;
-    border: 1px solid black;
 }
 
 .search {
@@ -131,12 +135,26 @@ a:hover {
     max-width: 50%;
 }
 
-input {
-    display: block;
+.search-border {
     width: 585px;
     height: 46px;
     border: 1px solid rgb(223, 225, 229);
     border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    display: block;
+    border: none;
+    width: 500px;
+    height: 30px;
+}
+
+input:focus {
+    border: none;
+    outline: none;
 }
 
 .search-buttons {
@@ -160,4 +178,34 @@ input {
     border: 1px solid #c6c6c6;
     color: #000;
     cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(242, 242, 242);
+    border-top: 1px solid rgb(228, 228, 228);
+    padding: 0 2px;
+}
+
+footer li {
+    display: inline;
+    margin-right: 26px;
+}
+
+.footer-menu-left li:first-of-type {
+    margin-left: 26px;
+}
+
+.footer-menu-left a:link,
+.footer-menu-left a:visited,
+.footer-menu-right a:link,
+.footer-menu-right a:visited{
+    color: rgb(95, 99, 104);
+    font-size: 14px;
 }
